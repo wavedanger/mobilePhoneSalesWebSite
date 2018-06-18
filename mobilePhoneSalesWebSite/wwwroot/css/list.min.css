@@ -1,0 +1,64 @@
+﻿
+hr {
+    margin: 2em 0px;
+}
+
+.blog_list h2 {
+    line-height: 1.5em;
+    font-size: 1.5em;
+}
+
+.blog_list h5 {
+    text-transform: capitalize;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    color: #202227;
+}
+
+    .blog_list h5 a {
+        color: rgba(0,0,0,0.3);
+        transition: 0.9s;
+        padding: 10px;
+    }
+
+        .blog_list h5 a:hover {
+            color: #202227;
+        }
+
+.blog_para p {
+    margin: 2% 0;
+}
+
+    .blog_para p a {
+        float: left;
+        margin-right: 5%;
+    }
+
+        .blog_para p a img {
+            margin-top: 10px;
+        }
+
+.read_more1 {
+    margin-top: 2%;
+}
+
+p.para {
+    color: #000000;
+    line-height: 1.8em;
+    font-size: 1em;
+}
+
+.btn_s {
+    padding: 8px 16px;
+    border: 1px solid #ffffff;
+    background: #366;
+    display: inline-block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.9s;
+}
+
+    .btn_s:hover {
+        background: #000000;
+    }
