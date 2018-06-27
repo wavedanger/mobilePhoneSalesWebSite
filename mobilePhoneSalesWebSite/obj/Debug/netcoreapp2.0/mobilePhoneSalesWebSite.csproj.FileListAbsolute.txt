@@ -9,3 +9,14 @@ C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebS
 C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfo.cs
 C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
 C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.deps.json
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.runtimeconfig.json
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.runtimeconfig.dev.json
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfoInputs.cache
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfo.cs
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
+C:\Users\Administrator\Source\Repos\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb

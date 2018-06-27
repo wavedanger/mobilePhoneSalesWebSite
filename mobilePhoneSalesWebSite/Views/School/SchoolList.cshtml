@@ -1,0 +1,6 @@
+﻿@{
+    Layout = "_Layout2";
+}
+@model IQueryable<School>
+<h3>学院列表：</h3> @foreach (School s in Model)
+{<p>名称：@s.Name ; 网址：@s.Site</p>} 
