@@ -22,7 +22,9 @@ namespace mobilePhoneSalesWebSite.Controllers
             //return View(phones);
             HomeIndexViewModel ivm = new HomeIndexViewModel();
             ivm.AllPhones = new List<PhoneList>();
-            var AllPhones = _dbContext.Phone.Where<Phone>(e =>e.ObjId > 0).Take<Phone>(4);
+            ivm.SpeedBuy = new List<PhoneList>();
+            var AllPhones = _dbContext.Phone.Where<Phone>(e =>e.ObjId > 0);
+            //var AllPhones = _dbContext.Phone.Where<Phone>(e => e.ObjId > 0).Take<Phone>(4);
             foreach (var p in AllPhones)
             {
                 PhoneList pl = new PhoneList();

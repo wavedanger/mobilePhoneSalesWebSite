@@ -18,14 +18,14 @@ namespace mobilePhoneSalesWebSite.Models
         public virtual DbSet<Phone> Phone { get; set; }
         public virtual DbSet<School> School { get; set; }
 
-        //        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //        {
-        //            if (!optionsBuilder.IsConfigured)
-        //            {
-        //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-        //                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Database\\DataDemo.mdf;Integrated Security=True;Connect Timeout=30");
-        //            }
-        //        }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\Database\\DataDemo.mdf;Integrated Security=True;Connect Timeout=30");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -34,6 +34,10 @@ namespace mobilePhoneSalesWebSite.Models
                 entity.HasKey(e => e.ObjId);
 
                 entity.Property(e => e.ObjId).ValueGeneratedNever();
+
+                entity.Property(e => e.Brand)
+                    .HasColumnName("brand")
+                    .HasMaxLength(10);
 
                 entity.Property(e => e.Img)
                     .IsRequired()

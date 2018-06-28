@@ -12,5 +12,6 @@ namespace mobilePhoneSalesWebSite.Models
         public string Img { get; set; }
         public int PhoneId { get; set; }
         public string Price2 { get; set; }
+        public string Brand { get; set; }
     }
 }

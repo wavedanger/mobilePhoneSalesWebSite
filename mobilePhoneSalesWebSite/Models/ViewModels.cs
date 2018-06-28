@@ -10,6 +10,7 @@ namespace mobilePhoneSalesWebSite.Models
     {
 
         public List<PhoneList> AllPhones { get; set; }
+        public List<PhoneList> SpeedBuy { get; set; }
     }
     public class PhoneList
     {
