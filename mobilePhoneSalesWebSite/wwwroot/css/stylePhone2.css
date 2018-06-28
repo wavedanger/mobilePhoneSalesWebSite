@@ -96,14 +96,14 @@
         margin-right: 1%;
         border: 1px solid white;
     }
+        .ollist li.active {
+            border: 1px solid white;
+        }
 
         .ollist li:hover {
             border: 1px solid red;
         }
 
-        .ollist li.active {
-            border: 1px solid red;
-        }
 /*取消轮播图左右按键阴影*/
 .carousel > .left, .carousel > .right {
     background-image: none;

@@ -114,10 +114,12 @@ namespace mobilePhoneSalesWebSite.Controllers
 
             return View();
         }
-        public IActionResult Phonedetail()
+        public IActionResult Phonedetail(int? id)
         {
             ViewData["Message"] = "Your application Phonedetail page.";
-            return View();
+            PhoneList pl = new PhoneList();
+            pl.p = _dbContext.Phone.Single<Phone>(e => e.ObjId == id);
+            return View(pl);
         }
         public IActionResult List()
         {
