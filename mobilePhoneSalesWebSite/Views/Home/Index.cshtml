@@ -189,7 +189,7 @@
             <div class="navbar-header">
                 <span class="navbar-brand">手机</span>
             </div>
-            <a asp-action="/phonedetail" style="float:right">查看全部&gt;</a>
+            <a asp-action="/AllPhone" style="float:right">查看全部&gt;</a>
         </div>
     </div>
     <div class="row">
@@ -198,7 +198,7 @@
         </div>
         <div class="col-md-9">
             <div class="row">
-                @foreach (PhoneList p1 in Model.AllPhones)
+                @foreach (PhoneList p1 in Model.Phones)
                 {
                     <div class="col-xs-6 col-md-4">
                         <a asp-action="/phonedetail/@p1.p.ObjId" class="thumbnail">

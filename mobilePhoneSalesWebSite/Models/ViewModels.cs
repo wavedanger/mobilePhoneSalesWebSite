@@ -16,6 +16,7 @@ namespace mobilePhoneSalesWebSite.Models
         public List<PhoneList> Hot2 { get; set; }
         public List<PhoneList> Hot3 { get; set; }
         public List<PhoneList> Hot4 { get; set; }
+        public List<PhoneList> Phones { get; set; }
     }
     public class PhoneList
     {

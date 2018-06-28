@@ -22,14 +22,14 @@ namespace mobilePhoneSalesWebSite.Controllers
             //var phones = _dbContext.Phone.AsQueryable<Phone>();
             //return View(phones);
             HomeIndexViewModel ivm = new HomeIndexViewModel();
-            ivm.AllPhones = new List<PhoneList>();
+            ivm.Phones = new List<PhoneList>();
             ivm.SpeedBuy = new List<PhoneList>();
             ivm.SpeedBuy2 = new List<PhoneList>();
             ivm.Hot = new List<PhoneList>();
             ivm.Hot2 = new List<PhoneList>();
             ivm.Hot3 = new List<PhoneList>();
             ivm.Hot4 = new List<PhoneList>();
-            var AllPhones = _dbContext.Phone.Where<Phone>(e =>e.ObjId > 0).Take<Phone>(6);
+            var Phones= _dbContext.Phone.Where<Phone>(e => e.ObjId > 0).Take<Phone>(6);
             var SpeedBuy = _dbContext.Phone.Where<Phone>(e => e.ObjId > 6).Take<Phone>(4);
             var SpeedBuy2 = _dbContext.Phone.Where<Phone>(e => e.ObjId > 10).Take<Phone>(4);
             //var AllPhones = _dbContext.Phone.Where<Phone>(e => e.ObjId > 0).Take<Phone>(4);
@@ -37,11 +37,11 @@ namespace mobilePhoneSalesWebSite.Controllers
             var Hot2 = _dbContext.Phone.Where<Phone>(e => e.Brand == "华为").Take<Phone>(4);
             var Hot3 = _dbContext.Phone.Where<Phone>(e => e.Brand == "苹果").Take<Phone>(4);
             var Hot4 = _dbContext.Phone.Where<Phone>(e => e.Brand == "三星").Take<Phone>(4);
-            foreach (var p in AllPhones)
+            foreach (var p in Phones)
             {
                 PhoneList pl = new PhoneList();
                 pl.p = new Phone { ObjId = p.ObjId, Name = p.Name, Introduce = p.Introduce, Img = p.Img, Price = p.Price, Price2 = p.Price2 };
-                ivm.AllPhones.Add(pl);
+                ivm.Phones.Add(pl);
             }
             foreach (var p in SpeedBuy)
             {
@@ -132,6 +132,20 @@ namespace mobilePhoneSalesWebSite.Controllers
             ViewData["Message"] = "Your application Article page.";
 
             return View();
+        }
+        public IActionResult AllPhone()
+        {
+            ViewData["Message"] = "Your application AllPhone page.";
+            HomeIndexViewModel ivm = new HomeIndexViewModel();
+            ivm.AllPhones = new List<PhoneList>();
+            var AllPhones = _dbContext.Phone.Where<Phone>(e => e.ObjId > 0);
+            foreach (var p in AllPhones)
+            {
+                PhoneList pl = new PhoneList();
+                pl.p = new Phone { ObjId = p.ObjId, Name = p.Name, Introduce = p.Introduce, Img = p.Img, Price = p.Price, Price2 = p.Price2 };
+                ivm.AllPhones.Add(pl);
+            }
+            return View(ivm);
         }
     }
 }
