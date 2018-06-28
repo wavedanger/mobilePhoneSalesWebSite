@@ -286,10 +286,10 @@
                 <span class="navbar-brand">热门推荐</span>
             </div>
             <ul class="nav nav-tabs navbar-right" role="tablist">
-                <li class="active" role="presentation"><a href="#p1" role="tab" data-toggle="tab">手机1</a></li>
-                <li role="presentation"><a href="#p2" role="tab" data-toggle="tab">手机2</a></li>
-                <li role="presentation"><a href="#p3" role="tab" data-toggle="tab">手机3</a></li>
-                <li role="presentation"><a href="#p4" role="tab" data-toggle="tab">手机4</a></li>
+                <li class="active" role="presentation"><a href="#p1" role="tab" data-toggle="tab">小米</a></li>
+                <li role="presentation"><a href="#p2" role="tab" data-toggle="tab">华为</a></li>
+                <li role="presentation"><a href="#p3" role="tab" data-toggle="tab">苹果</a></li>
+                <li role="presentation"><a href="#p4" role="tab" data-toggle="tab">三星</a></li>
             </ul>
         </div>
     </div>
@@ -297,7 +297,20 @@
         <div class="col-md-12">
             <div class="tab-content">
                 <div id="p1" role="tabpanel" class="active tab-pane">
-                    <div class="col-xs-6 col-md-3">
+                    @foreach (PhoneList mi in Model.Hot)
+                        {
+                        <div class="col-xs-6 col-md-3">
+                            <a asp-action="/phonedetail" class="thumbnail">
+                                <img alt="" src="~/images/@mi.p.Img" style="height: 100%; width: 100%; display: block;">
+                                <div class="text-center">
+                                    <h5>@mi.p.Name</h5>
+                                    <small>@mi.p.Introduce</small>
+                                    <p class="text-danger">@mi.p.Price 元<small><del>@mi.p.Price2 元</del></small></p>
+                                </div>
+                            </a>
+                        </div>
+                        }
+                    @*<div class="col-xs-6 col-md-3">
                         <a asp-action="/phonedetail" class="thumbnail">
                             <img alt="" src="~/images/product1.jpg" style="height: 100%; width: 100%; display: block;">
                             <div class="text-center">
@@ -336,10 +349,23 @@
                                 <p class="text-danger">3739元<small><del>3799元</del></small></p>
                             </div>
                         </a>
-                    </div>
+                    </div>*@
                 </div>
                 <div id="p2" role="tabpanel" class="tab-pane">
-                    <div class="col-xs-6 col-md-3">
+                    @foreach (PhoneList p1 in Model.Hot2)
+                    {
+                        <div class="col-xs-6 col-md-3">
+                            <a asp-action="/phonedetail" class="thumbnail">
+                                <img alt="" src="~/images/@p1.p.Img" style="height: 100%; width: 100%; display: block;">
+                                <div class="text-center">
+                                    <h5>@p1.p.Name</h5>
+                                    <small>@p1.p.Introduce</small>
+                                    <p class="text-danger">@p1.p.Price 元<small><del>@p1.p.Price2 元</del></small></p>
+                                </div>
+                            </a>
+                        </div>
+                       }
+                    @*<div class="col-xs-6 col-md-3">
                         <a asp-action="/phonedetail" class="thumbnail">
                             <img alt="" src="~/images/p1.jpg" style="height: 100%; width: 100%; display: block;">
                             <div class="text-center">
@@ -378,91 +404,117 @@
                                 <p class="text-danger">1299元<small><del>1499元</del></small></p>
                             </div>
                         </a>
-                    </div>
+                    </div>*@
                 </div>
                 <div id="p3" role="tabpanel" class="tab-pane">
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/p5.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>Apple iPhone 8 Plus (A1864)...</h5>
-                                <small>移动联通电信4G手机</small>
-                                <p class="text-danger">6688元<small><del>7399元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/p6.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>8848钛金手机 M3尊享版...</h5>
-                                <small>全网通4G 双卡双待</small>
-                                <p class="text-danger">9739元<small><del>9999元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/p7.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>三星Galaxy S8...</h5>
-                                <small> 移动联通电信4G手机 双卡双待</small>
-                                <p class="text-danger">4999元<small><del>5399元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/p8.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>三星 Galaxy S9+...</h5>
-                                <small>移动联通电信4G手机 双卡双待</small>
-                                <p class="text-danger">6799元<small><del>6999元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach (PhoneList p1 in Model.Hot3)
+    {
+                <div class="col-xs-6 col-md-3">
+                    <a asp-action="/phonedetail" class="thumbnail">
+                        <img alt="" src="~/images/@p1.p.Img" style="height: 100%; width: 100%; display: block;">
+                        <div class="text-center">
+                            <h5>@p1.p.Name</h5>
+                            <small>@p1.p.Introduce</small>
+                            <p class="text-danger">@p1.p.Price 元<small><del>@p1.p.Price2 元</del></small></p>
+                        </div>
+                    </a>
+                </div>
+}
+                    @*<div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/p5.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>Apple iPhone 8 Plus (A1864)...</h5>
+                    <small>移动联通电信4G手机</small>
+                    <p class="text-danger">6688元<small><del>7399元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/p6.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>8848钛金手机 M3尊享版...</h5>
+                    <small>全网通4G 双卡双待</small>
+                    <p class="text-danger">9739元<small><del>9999元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/p7.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>三星Galaxy S8...</h5>
+                    <small> 移动联通电信4G手机 双卡双待</small>
+                    <p class="text-danger">4999元<small><del>5399元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/p8.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>三星 Galaxy S9+...</h5>
+                    <small>移动联通电信4G手机 双卡双待</small>
+                    <p class="text-danger">6799元<small><del>6999元</del></small></p>
+                </div>
+            </a>
+        </div>*@
                 </div>
                 <div id="p4" role="tabpanel" class="tab-pane">
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/product8.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>华为畅享8 全面屏三卡槽...</h5>
-                                <small>移动联通电信4G手机 双卡双待</small>
-                                <p class="text-danger">1239元<small><del>1299元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/product5.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>荣耀畅玩7A 全面屏手机 全网...</h5>
-                                <small>移动联通电信4G手机 双卡双待</small>
-                                <p class="text-danger">739元<small><del>799元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/product6.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>小米MIX2 全面屏游戏手机...</h5>
-                                <small>全网通4G手机 双卡双待</small>
-                                <p class="text-danger">2739元<small><del>2899元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-6 col-md-3">
-                        <a asp-action="/phonedetail" class="thumbnail">
-                            <img alt="" src="~/images/product7.jpg" style="height: 100%; width: 100%; display: block;">
-                            <div class="text-center">
-                                <h5>vivo Y85 全面屏 美颜拍照...</h5>
-                                <small>移动联通电信4G手机 双卡双待</small>
-                                <p class="text-danger">1798元<small><del>2099元</del></small></p>
-                            </div>
-                        </a>
-                    </div>
+                    @foreach (PhoneList p1 in Model.Hot4)
+    {
+                <div class="col-xs-6 col-md-3">
+                    <a asp-action="/phonedetail" class="thumbnail">
+                        <img alt="" src="~/images/@p1.p.Img" style="height: 100%; width: 100%; display: block;">
+                        <div class="text-center">
+                            <h5>@p1.p.Name</h5>
+                            <small>@p1.p.Introduce</small>
+                            <p class="text-danger">@p1.p.Price 元<small><del>@p1.p.Price2 元</del></small></p>
+                        </div>
+                    </a>
+                </div>
+}
+                    @*<div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/product8.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>华为畅享8 全面屏三卡槽...</h5>
+                    <small>移动联通电信4G手机 双卡双待</small>
+                    <p class="text-danger">1239元<small><del>1299元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/product5.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>荣耀畅玩7A 全面屏手机 全网...</h5>
+                    <small>移动联通电信4G手机 双卡双待</small>
+                    <p class="text-danger">739元<small><del>799元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/product6.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>小米MIX2 全面屏游戏手机...</h5>
+                    <small>全网通4G手机 双卡双待</small>
+                    <p class="text-danger">2739元<small><del>2899元</del></small></p>
+                </div>
+            </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+            <a asp-action="/phonedetail" class="thumbnail">
+                <img alt="" src="~/images/product7.jpg" style="height: 100%; width: 100%; display: block;">
+                <div class="text-center">
+                    <h5>vivo Y85 全面屏 美颜拍照...</h5>
+                    <small>移动联通电信4G手机 双卡双待</small>
+                    <p class="text-danger">1798元<small><del>2099元</del></small></p>
+                </div>
+            </a>
+        </div>*@
                 </div>
             </div>
         </div>
