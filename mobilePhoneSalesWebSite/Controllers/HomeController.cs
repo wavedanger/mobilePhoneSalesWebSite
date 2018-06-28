@@ -23,13 +23,28 @@ namespace mobilePhoneSalesWebSite.Controllers
             HomeIndexViewModel ivm = new HomeIndexViewModel();
             ivm.AllPhones = new List<PhoneList>();
             ivm.SpeedBuy = new List<PhoneList>();
-            var AllPhones = _dbContext.Phone.Where<Phone>(e =>e.ObjId > 0);
+            ivm.SpeedBuy2 = new List<PhoneList>();
+            var AllPhones = _dbContext.Phone.Where<Phone>(e =>e.ObjId > 0).Take<Phone>(6);
+            var SpeedBuy = _dbContext.Phone.Where<Phone>(e => e.ObjId > 6).Take<Phone>(4);
+            var SpeedBuy2 = _dbContext.Phone.Where<Phone>(e => e.ObjId > 10).Take<Phone>(4);
             //var AllPhones = _dbContext.Phone.Where<Phone>(e => e.ObjId > 0).Take<Phone>(4);
             foreach (var p in AllPhones)
             {
                 PhoneList pl = new PhoneList();
                 pl.p = new Phone { ObjId = p.ObjId, Name = p.Name, Introduce = p.Introduce, Img = p.Img, Price = p.Price, Price2 = p.Price2 };
                 ivm.AllPhones.Add(pl);
+            }
+            foreach (var p in SpeedBuy)
+            {
+                    PhoneList left = new PhoneList();
+                    left.p = new Phone { ObjId = p.ObjId, Name = p.Name, Introduce = p.Introduce, Img = p.Img, Price = p.Price, Price2 = p.Price2 };
+                    ivm.SpeedBuy.Add(left);
+            }
+            foreach (var p in SpeedBuy2)
+            {
+                PhoneList right = new PhoneList();
+                right.p = new Phone { ObjId = p.ObjId, Name = p.Name, Introduce = p.Introduce, Img = p.Img, Price = p.Price, Price2 = p.Price2 };
+                ivm.SpeedBuy2.Add(right);
             }
             return View(ivm);
             //return View();
