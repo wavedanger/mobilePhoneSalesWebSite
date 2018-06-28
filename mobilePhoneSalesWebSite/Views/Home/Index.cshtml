@@ -4,7 +4,7 @@
 @{
     Layout = "_Layout";
 }
-@model IEnumerable<mobilePhoneSalesWebSite.Models.Phone>
+@model HomeIndexViewModel
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -181,20 +181,20 @@
         </div>
         <div class="col-md-9">
             <div class="row">
-                @*@foreach (var item in Model)
-                    {
-                        <div class="col-xs-6 col-md-4">
-                            <a asp-action="/phonedetail" class="thumbnail">
-                                <img alt="" src="~/images/@Html.DisplayFor(modelItem=>item.Img)" style="height: 100%; width: 100%; display: block;">
-                                <div class="text-center">
-                                    <h5>@Html.DisplayFor(modelItem => item.Name) </h5>
-                                    <small>@Html.DisplayFor(modelItem => item.Introduce) </small>
-                                    <p class="text-danger">@Html.DisplayFor(modelItem => item.Price) 元<small><del>@Html.DisplayFor(modelItem => item.Price2)   元</del></small></p>
-                                </div>
-                            </a>
-                        </div>
-                    }*@
-                <div class="col-xs-6 col-md-4">
+                @foreach (PhoneList p1 in Model.AllPhones)
+                {
+                    <div class="col-xs-6 col-md-4">
+                        <a asp-action="/phonedetail" class="thumbnail">
+                            <img alt="" src="~/images/@p1.p.Img" style="height: 100%; width: 100%; display: block;">
+                            <div class="text-center">
+                                <h5>@p1.p.Name </h5>
+                                <small>@p1.p.Introduce </small>
+                                <p class="text-danger">@p1.p.Price 元<small><del>@p1.p.Price2   元</del></small></p>
+                            </div>
+                        </a>
+                    </div>
+                }
+                @*<div class="col-xs-6 col-md-4">
                     <a asp-action="/phonedetail" class="thumbnail">
                         <img alt="" src="~/images/product5.jpg" style="height: 100%; width: 100%; display: block;">
                         <div class="text-center">
@@ -253,7 +253,7 @@
                             <p class="text-danger">4739元<small><del>5799元</del></small></p>
                         </div>
                     </a>
-                </div>
+                </div>*@
             </div>
         </div>
     </div>

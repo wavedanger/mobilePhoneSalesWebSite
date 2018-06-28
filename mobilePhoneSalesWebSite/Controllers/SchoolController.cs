@@ -26,7 +26,7 @@ namespace mobilePhoneSalesWebSite.Controllers
         {
             _dbContext.School.Add(s);
             _dbContext.SaveChanges();
-            var schools = _dbContext.School.AsQueryable<School>(); ;
+            var schools = _dbContext.School.AsQueryable<School>();
             return View("SchoolList", schools);
         }
     }
