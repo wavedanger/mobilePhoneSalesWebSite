@@ -94,5 +94,10 @@ namespace mobilePhoneSalesWebSite.Controllers
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }
         }
+        [HttpPost]
+        public IActionResult Index(LoginViewModel s)
+        {
+            return View("SchoolList");
+        }
     }
 }

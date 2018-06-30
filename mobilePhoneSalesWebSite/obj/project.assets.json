@@ -6096,7 +6096,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "Y6HVv8/04wxkTBzCRfSUmbYbZgMlDOwEvSvlGL2oYCjb5oXcd3NAjEpQ75E7+1TCz2ZS1PsXCRFakbpQwpJluQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "files": [
@@ -13247,24 +13247,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\炜庭\\.nuget\\packages\\": {},
+    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\net网页\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Documents\\GitHub\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite.csproj",
       "projectName": "mobilePhoneSalesWebSite",
-      "projectPath": "F:\\net网页\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite.csproj",
-      "packagesPath": "C:\\Users\\炜庭\\.nuget\\packages\\",
-      "outputPath": "F:\\net网页\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\obj\\",
+      "projectPath": "C:\\Users\\Administrator\\Documents\\GitHub\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite.csproj",
+      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Administrator\\Documents\\GitHub\\mobilePhoneSalesWebSite\\mobilePhoneSalesWebSite\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\炜庭\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
