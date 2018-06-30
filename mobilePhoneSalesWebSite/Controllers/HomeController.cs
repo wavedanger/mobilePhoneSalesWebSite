@@ -102,7 +102,7 @@ namespace mobilePhoneSalesWebSite.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        public IActionResult Login()
+       /* public IActionResult Login()
         {
             ViewData["Message"] = "Your application Login page.";
 
@@ -113,7 +113,7 @@ namespace mobilePhoneSalesWebSite.Controllers
             ViewData["Message"] = "Your application Register page.";
 
             return View();
-        }
+        }*/
         public IActionResult Phonedetail(int? id)
         {
             ViewData["Message"] = "Your application Phonedetail page.";

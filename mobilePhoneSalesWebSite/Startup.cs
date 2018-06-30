@@ -10,11 +10,13 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using mobilePhoneSalesWebSite.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace mobilePhoneSalesWebSite
 {
     public class Startup
     {
+        IConfigurationRoot Configuration;
         //public Startup(IConfiguration configuration)
         //{
         //    Configuration = configuration;
@@ -28,7 +30,6 @@ namespace mobilePhoneSalesWebSite
             .AddJsonFile("appsettings.json")
             .Build();
         }
-        public IConfigurationRoot Configuration { get; set; }
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
@@ -36,6 +37,14 @@ namespace mobilePhoneSalesWebSite
             //var connection = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Database\DataDemo.mdf;Integrated Security=True;Connect Timeout=30"; 
             //services.AddDbContext<DDATABASEDATADEMOMDFContext>(options =>options.UseSqlServer(connection));
             services.AddDbContext<DDATABASEDATADEMOMDFContext>(options => options.UseSqlServer((Configuration.GetConnectionString("DefaultConnection"))));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<ApplicationUser, IdentityRole>(
+                options =>
+                {
+                    options.Lockout.MaxFailedAccessAttempts = 5;
+                })
+               .AddEntityFrameworkStores<ApplicationDbContext>()
+               .AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,59 @@
+﻿@model LoginViewModel
+@{ ViewData["Title"] = "登录";
+}
+@{
+    Layout = "_Layout2";
+}
+<h2>@ViewData["Title"]</h2>
+<div class="inner-bg">
+    <div class="container">
+        <div class="row">
+            <div class="login-top col-sm-6">
+                <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
+                    <h4>使用本地帐号登录。</h4>
+                    <hr />
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Name" class="col-sm-3 control-label">用户名：</label>
+                        <div class="col-sm-7">
+                            <input asp-for="Name" class="form-control" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="col-sm-3 control-label">密码：</label>
+                        <div class="col-sm-7">
+                            <input asp-for="Password" class="form-control" />
+                            <span asp-validation-for="Password" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-3 col-sm-7">
+                            <div class="checkbox">
+                                <label asp-for="RememberMe">
+                                    <input asp-for="RememberMe" />
+                                    @Html.DisplayNameFor(m => m.RememberMe)
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-7">
+                            <button type="submit" class="btn btn-default">登录</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="login-bottom  col-sm-6 col-sm-offset-4">
+                <h3>新用户 <a asp-action="/Register">注册</a>这里</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="login-bottom  col-sm-6 col-sm-offset-4">
+                <h4><a href="https://github.com/wavedanger/MobileWebMaterial">联系我们&nbsp;</a>&copy;软1.net开发团队</h4>
+            </div>
+        </div>
+    </div>
+</div>

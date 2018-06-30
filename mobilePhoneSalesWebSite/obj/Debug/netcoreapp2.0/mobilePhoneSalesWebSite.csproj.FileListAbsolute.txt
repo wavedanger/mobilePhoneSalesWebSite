@@ -31,3 +31,14 @@ C:\Users\Administrator\Documents\GitHub\mobilePhoneSalesWebSite\mobilePhoneSales
 C:\Users\Administrator\Documents\GitHub\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfo.cs
 C:\Users\Administrator\Documents\GitHub\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
 C:\Users\Administrator\Documents\GitHub\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.csprojAssemblyReference.cache
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.csproj.CoreCompileInputs.cache
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfoInputs.cache
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.AssemblyInfo.cs
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\obj\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.deps.json
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.runtimeconfig.json
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.runtimeconfig.dev.json
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.dll
+F:\net网页\mobilePhoneSalesWebSite\mobilePhoneSalesWebSite\bin\Debug\netcoreapp2.0\mobilePhoneSalesWebSite.pdb
