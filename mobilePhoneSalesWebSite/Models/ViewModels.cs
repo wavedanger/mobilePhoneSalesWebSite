@@ -22,4 +22,13 @@ namespace mobilePhoneSalesWebSite.Models
     {
         public Phone p { get; set; }
     }
+    public class CartItem
+    {
+        public string productName { get; set; }
+        public string feature { get; set; }
+        public string price { get; set; }
+        public string realPrice { get; set; }
+        public int qty { get; set; }
+        public string smallImg { get; set; }
+    }
 }

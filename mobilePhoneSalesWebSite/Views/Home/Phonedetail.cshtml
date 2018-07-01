@@ -155,7 +155,8 @@
                     <div id="gwc" class="chioce">
                         <span id="head">数量</span>&nbsp; &nbsp; &nbsp; &nbsp;
                         <input type="number" class="number" value="1" min="1" max="999">
-                        <a class="btn btn-danger btn-lg" asp-page="/" role="button">加入购物车</a>
+                        <a class="btn btn-danger btn-lg" href="/Cart/AddCart/@Model.p.ObjId?retUrl=@ViewBag.contBuy" role="button">加入购物车</a>
+                        <a class="btn btn-danger btn-lg" href="/Cart/AddFavi/@Model.p.ObjId?retUrl=@ViewBag.contBuy" role="button">收藏</a>
                     </div>
                 </div>
             </div>
