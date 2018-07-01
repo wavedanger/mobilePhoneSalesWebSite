@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using mobilePhoneSalesWebSite.Models;
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <p>欢迎您，@UserManager.GetUserName(User)!</p>
+    @*<form id="logoutForm" asp-controller="Account" asp-action="LogOff" method="post">
+        <a href="javascript:document.getElementById('logoutForm').submit()">注销</a>
+    </form>*@
+}
+else
+{
+    <li><a asp-action="../Account/Register"><span class="glyphicon glyphicon-user"></span>注册</a></li>
+    <li><a asp-controller="Account" asp-action="Login"><span class="glyphicon glyphicon-log-in"></span>登录</a></li>
+    @*<p>欢迎光临。送花请<a asp-area="" asp-controller="Account" asp-action="Login">登录</a></p>
+    <p>免费<a asp-area="" asp-controller="Account" asp-action="Register">注册</a></p>*@
+}

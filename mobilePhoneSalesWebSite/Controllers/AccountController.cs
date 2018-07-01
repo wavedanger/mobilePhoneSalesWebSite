@@ -29,10 +29,10 @@ namespace mobilePhoneSalesWebSite.Controllers
             _signInManager = signInManager;
             _logger = logger;
         }
-        public IActionResult Index()
-        {
-            return View(_userManager);
-        }
+        //public IActionResult Index()
+        //{
+        //    return View(_userManager);
+        //}
         public ViewResult Register() => View();
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel model)
@@ -47,7 +47,7 @@ namespace mobilePhoneSalesWebSite.Controllers
                 IdentityResult result = await _userManager.CreateAsync(user, model.Password);
                 if(result.Succeeded)
                 {
-                    
+                    await _signInManager.SignInAsync(user, isPersistent: false);
                     return RedirectToAction("../Home/Index");
                 }
                 else
@@ -94,10 +94,10 @@ namespace mobilePhoneSalesWebSite.Controllers
                 return RedirectToAction(nameof(HomeController.Index), "Home");
             }
         }
-        [HttpPost]
-        public IActionResult Index(LoginViewModel s)
-        {
-            return View("SchoolList");
-        }
+        //[HttpPost]
+        //public IActionResult Index(LoginViewModel s)
+        //{
+        //    return View("SchoolList");
+        //}
     }
 }
