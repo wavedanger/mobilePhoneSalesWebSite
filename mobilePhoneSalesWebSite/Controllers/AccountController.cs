@@ -83,6 +83,14 @@ namespace mobilePhoneSalesWebSite.Controllers
             }
             return View(model);
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            _logger.LogInformation("用户已登出。");
+            return RedirectToAction(nameof(HomeController.Index), "Home");
+        }
         private IActionResult RedirectToLocal(string returnUrl)
         {
             if(Url.IsLocalUrl(returnUrl))

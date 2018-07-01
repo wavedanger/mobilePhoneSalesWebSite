@@ -4,13 +4,17 @@
 @{
     Layout = "_Layout2";
 }
-<h2>@ViewData["Title"]</h2>
+@*<h2>@ViewData["Title"]</h2>*@
 <div class="inner-bg">
     <div class="container">
         <div class="row">
             <div class="login-top col-sm-6">
                 <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
-                    <h4>使用本地帐号登录。</h4>
+                    <div class="row">
+                        <div class="text">
+                            <h1 class="text-center">用户登录</h1>
+                        </div>
+                    </div>
                     <hr />
                     <div asp-validation-summary="All" class="text-danger"></div>
                     <div class="form-group">
@@ -34,24 +38,20 @@
                                     <input asp-for="RememberMe" />
                                     @Html.DisplayNameFor(m => m.RememberMe)
                                 </label>
+                                <a asp-action="/Register">还没注册？</a>
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-3 col-sm-7">
-                            <button type="submit" class="btn btn-default">登录</button>
+                            <button type="submit" class="btn btn-primary btn-block">登录</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
         <div class="row">
-            <div class="login-bottom  col-sm-6 col-sm-offset-4">
-                <h3>新用户 <a asp-action="/Register">注册</a>这里</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="login-bottom  col-sm-6 col-sm-offset-4">
+            <div class="login-bottom col-sm-offset-2">
                 <h4><a href="https://github.com/wavedanger/MobileWebMaterial">联系我们&nbsp;</a>&copy;软1.net开发团队</h4>
             </div>
         </div>

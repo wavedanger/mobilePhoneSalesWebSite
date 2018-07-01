@@ -41,12 +41,12 @@
         window.location.assign("/Cart/buyFaviRow/" + row + "?retUrl=" + retUrl);
     }
 </script>
-<div>
+<div class="container">
     @if (ViewBag.cart != null && ((List<CartItem>)ViewBag.cart).Count >= 1)
     {
-        <table border="1" style="background-color:White;border-width:1px;border-style:Double;font-size:X-Small;width:95%;border-collapse:collapse;">
+        <table border="1" style="background-color:White;border-width:1px;border-style:Double;font-size:12px;border-color:#000000; width:100%;border-collapse:collapse;">
             <caption style="font-size:14px;">我的购物车</caption>
-            <tr style="color:#FFFFCC;background-color:#990000;font-weight:bold;">
+            <tr style="color:#FFFFFF;background-color:#000000;font-weight:bold;">
                 <th scope="col">&nbsp;</th>
                 <th scope="col" style="text-align:center;">商品名</th>
                 <th scope="col" style="text-align:center;">商品描述</th>
@@ -59,7 +59,7 @@
             </tr>
             @foreach (var cartItem in ViewBag.cart as List<CartItem>)
             {
-                <tr style="color:#330099;background-color:White;">
+                <tr style="color:#000000;background-color:White;">
                     <td style="border:1px solid;text-align:center;">
                         <div id="edit_@cartRow" style="display:block;">
                             <a href="javascript:_doEdit(@cartRow)" style="color:#330099;">编辑</a>
@@ -84,18 +84,18 @@
                 cartRow++;
             }
         </table>
-        <table style="width:95%;margin:0px;padding:0px;">
+        <table style="width:100%;margin:0px;padding:0px;">
             <tr>
-                <td style="text-align:left;"><a href="@ViewBag.continueBuy">继续选购</a></td>
+                <td style="text-align:left;"><a asp-controller="Home" asp-action="AllPhone">继续选购</a></td>
                 <td style="text-align:right;"><a href="/Order">结算</a></td>
             </tr>
         </table>
     }
     @if (ViewBag.favi != null && ViewBag.favi.Count >= 1)
     {
-        <table border="1" style="background-color:White;border-width:1px;border-style:Double;font-size:X-Small;width:95%;border-collapse:collapse;">
+        <table border="1" style="background-color:White;border-width:1px;border-style:Double;font-size:12px;width:100%;border-collapse:collapse;">
             <caption style="font-size:14px;">我的收藏架</caption>
-            <tr style="color:#FFFFCC;background-color:#990000;font-weight:bold;">
+            <tr style="color:#FFFFFF;background-color:#000000;font-weight:bold;">
                 <th scope="col" style="text-align:center;">商品名</th>
                 <th scope="col" style="text-align:center;">商品描述</th>
                 <th scope="col" style="text-align:center;">市场价</th>
@@ -106,7 +106,7 @@
             </tr>
             @foreach (var cartItem in ViewBag.favi as List<CartItem>)
             {
-                <tr style="color:#330099;background-color:White;">
+                <tr style="color:#000000;background-color:White;">
                     <td style="border:1px solid;text-align:center;">@cartItem.productName</td>
                     <td style="border:1px solid;text-align:center;">@cartItem.feature</td>
                     <td style="border:1px solid;text-align:center;">@cartItem.price</td>
